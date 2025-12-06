@@ -1,0 +1,46 @@
+{
+  "name": "CuraLens - Medicine Management",
+  "short_name": "CuraLens",
+  "description": "Medicine identification and drug interaction checker",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "id": "/",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#4a90e2",
+  "categories": ["health", "medical", "utilities"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/Curalens app logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/Curalens app logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/screenshot-phone.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "platform": "narrow",
+      "label": "CuraLens on mobile"
+    },
+    {
+      "src": "/screenshots/screenshot-desktop.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "CuraLens on desktop"
+    }
+  ]
+}

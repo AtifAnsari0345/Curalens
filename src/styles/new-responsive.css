@@ -1,0 +1,211 @@
+/* =========================================
+   CURALENS - NEW RESPONSIVE DESIGN SYSTEM
+   Mobile-First, Touch-Friendly, Performant
+   ========================================= */
+
+/* =========================================
+   BREAKPOINTS & MOBILE-FIRST SETUP
+   ========================================= */
+
+/* Base styles for all screen sizes (mobile-first) */
+:root {
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+}
+
+/* =========================================
+   GENERAL RESPONSIVE ADJUSTMENTS
+   ========================================= */
+
+/* Fluid typography for better scaling */
+h1 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+}
+
+h2 {
+  font-size: clamp(1.25rem, 4vw, 2rem);
+}
+
+p, li, a, span {
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+/* Prevent iOS from zooming on input focus */
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+textarea {
+  font-size: 16px !important;
+}
+
+/* =========================================
+   DASHBOARD-SPECIFIC RESPONSIVE STYLES
+   ========================================= */
+
+@media (max-width: 767px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    text-align: left;
+  }
+
+  .download-button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .medicine-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .time-input-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .time-input-container input,
+  .time-input-container button {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   DRUG INTERACTION PAGE - MOBILE OVERRIDES
+   ========================================= */
+
+@media (max-width: 767px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .med-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .remove-med-btn {
+    align-self: flex-end;
+    width: 44px;
+    height: 44px;
+    font-size: 1.25rem;
+  }
+
+  .interaction-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .check-interactions-btn {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* =========================================
+   TOUCH-FRIENDLY OPTIMIZATIONS
+   ========================================= */
+
+@media (hover: none) and (pointer: coarse) {
+  button,
+  .btn,
+  a.button,
+  .time-chip,
+  .remove-med-btn {
+    min-height: 48px;
+    min-width: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem; /* Add padding for a larger tap area */
+    font-size: 1.1rem; /* Increase font size for better readability */
+  }
+
+  /* Add a subtle visual feedback on tap */
+  button:active,
+  .btn:active,
+  a.button:active,
+  .time-chip:active,
+  .remove-med-btn:active {
+    transform: translateY(1px);
+    filter: brightness(95%);
+  }
+
+  .form-group input,
+  .search-input {
+    min-height: 48px;
+    padding: 0.5rem 1rem; /* Add padding for a larger tap area */
+    font-size: 1.1rem; /* Increase font size for better readability */
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY & PERFORMANCE
+   ========================================= */
+
+/* High-contrast focus outline for better visibility */
+:focus-visible {
+  outline: 3px solid #005fcc;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px rgba(0, 95, 204, 0.3);
+  border-radius: 4px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* General Responsive Layout */
+.responsive-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Adjust gap as needed */
+}
+
+.responsive-layout > * {
+  flex: 1 1 300px; /* Flex-grow, flex-shrink, and basis */
+}
+
+/* Touch-Friendly Optimizations */
+@media (pointer: coarse) {
+  .button, .btn, button, a, input, select, textarea {
+    min-height: 48px; /* Increased touch target size */
+    min-width: 48px;
+    padding: 0.8rem 1.2rem; /* Increased padding */
+    font-size: 1.1rem; /* Larger font size */
+  }
+
+  .button:active, .btn:active, button:active, a:active {
+    transform: translateY(1px);
+    filter: brightness(95%);
+  }
+}
+
+/* Accessibility: High-Contrast Focus Outline */
+:focus-visible {
+  outline: 3px solid #005fcc; /* High-contrast blue */
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Reduced Motion: Disable animations and transitions */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

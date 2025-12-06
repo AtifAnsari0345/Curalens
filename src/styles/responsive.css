@@ -1,0 +1,611 @@
+/* =========================================
+   CURALENS RESPONSIVE STYLES - PREMIUM DESIGN
+   Mobile-First, Fluid, Professional Responsive System
+   ========================================= */
+
+/* ==================== BASE MOBILE-FIRST APPROACH ==================== */
+.container {
+  width: 100%;
+  padding-left: 4%;
+  padding-right: 4%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==================== SMALL DEVICES (640px and up) ==================== */
+@media (min-width: 640px) {
+  .container {
+    max-width: var(--container-sm, 640px);
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  
+  /* Utility Classes */
+  .sm\:flex {
+    display: flex;
+  }
+  
+  .sm\:grid {
+    display: grid;
+  }
+  
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .sm\:hidden {
+    display: none;
+  }
+  
+  .sm\:block {
+    display: block;
+  }
+  
+  .sm\:inline {
+    display: inline;
+  }
+  
+  .sm\:inline-block {
+    display: inline-block;
+  }
+}
+
+/* ==================== MEDIUM DEVICES (768px and up) ==================== */
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--container-md, 768px);
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+  
+  /* Utility Classes */
+  .md\:flex {
+    display: flex;
+  }
+  
+  .md\:grid {
+    display: grid;
+  }
+  
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .md\:hidden {
+    display: none;
+  }
+  
+  .md\:block {
+    display: block;
+  }
+  
+  /* Dashboard Layout */
+  .dashboard-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  /* Header Improvements */
+  .header {
+    padding: 0 6%;
+  }
+  
+  /* Bottom Navigation for Tablets */
+  .bottom-nav {
+    padding: var(--space-3, 12px) var(--space-6, 24px);
+    height: 70px;
+  }
+  
+  .nav-item svg {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 8px;
+  }
+  
+  .nav-item span {
+    font-size: 0.9375rem;
+  }
+  
+  /* Content Padding */
+  .content {
+    padding-top: 80px;
+    padding-bottom: 90px;
+  }
+  
+  /* Dashboard & Page Containers */
+  .dashboard,
+  .page,
+  .profile-container {
+    padding: 2.5rem 8%;
+  }
+  
+  /* Section Cards */
+  .add-medicine-form,
+  .medicine-list,
+  .notification-settings,
+  .profile-section,
+  section {
+    padding: 2.5rem;
+  }
+  
+  /* Medicine Cards Grid */
+  .medicine-cards {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+/* ==================== LARGE DEVICES (1024px and up) ==================== */
+@media (min-width: 1024px) {
+  .container {
+    max-width: var(--container-lg, 1024px);
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  
+  /* Utility Classes */
+  .lg\:flex {
+    display: flex;
+  }
+  
+  .lg\:grid {
+    display: grid;
+  }
+  
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .lg\:hidden {
+    display: none;
+  }
+  
+  .lg\:block {
+    display: block;
+  }
+  
+  /* Header */
+  .header {
+    padding: 0 10%;
+  }
+  
+  /* Content Padding */
+  .content {
+    padding: var(--space-8, 32px);
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+  
+  /* Dashboard & Page Containers */
+  .dashboard,
+  .page,
+  .profile-container {
+    padding: 3rem 10%;
+  }
+  
+  /* Bottom Navigation - Desktop Optimized */
+  .bottom-nav {
+    width: 100%;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    height: 70px;
+    padding: 0 10%;
+    background-color: white;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  
+  .nav-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .nav-item svg {
+    width: 28px !important;
+    height: 28px !important;
+    stroke-width: 2;
+    margin-bottom: 6px;
+    color: currentColor;
+    stroke: currentColor;
+    fill: none;
+    visibility: visible !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .nav-item span {
+    font-size: 0.9375rem;
+    font-weight: 500;
+  }
+  
+  .nav-item.active {
+    color: var(--primary-blue, #667eea);
+  }
+  
+  .nav-item.active svg {
+    transform: scale(1.1);
+  }
+  
+  .nav-item:hover svg {
+    transform: translateY(-2px);
+  }
+  
+  .nav-item.active::after {
+    width: 50%;
+    background: var(--primary-gradient, linear-gradient(135deg, #667eea 0%, #764ba2 100%));
+  }
+  
+  /* Medicine Cards Grid */
+  .medicine-cards {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+}
+
+/* ==================== EXTRA LARGE DEVICES (1280px and up) ==================== */
+@media (min-width: 1280px) {
+  .container {
+    max-width: var(--container-xl, 1280px);
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  
+  /* Utility Classes */
+  .xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .xl\:grid-cols-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  /* Bottom Navigation - Large Screens */
+  .bottom-nav {
+    height: 75px;
+    padding: 0 12%;
+  }
+  
+  .nav-item svg {
+    width: 32px !important;
+    height: 32px !important;
+    margin-bottom: 8px;
+  }
+  
+  .nav-item span {
+    font-size: 1rem;
+  }
+  
+  /* Dashboard & Page Containers */
+  .dashboard,
+  .page,
+  .profile-container {
+    padding: 3rem 12%;
+  }
+  
+  /* Header */
+  .header {
+    padding: 0 12%;
+  }
+}
+
+/* ==================== 2XL DEVICES (1536px and up) ==================== */
+@media (min-width: 1536px) {
+  .container {
+    max-width: var(--container-2xl, 1536px);
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+  
+  /* Dashboard & Page Containers */
+  .dashboard,
+  .page,
+  .profile-container {
+    padding: 3.5rem 15%;
+  }
+  
+  /* Header */
+  .header {
+    padding: 0 15%;
+  }
+  
+  /* Bottom Navigation */
+  .bottom-nav {
+    padding: 0 15%;
+    height: 80px;
+  }
+  
+  .nav-item svg {
+    width: 36px !important;
+    height: 36px !important;
+    margin-bottom: 10px;
+  }
+  
+  .nav-item span {
+    font-size: 1.0625rem;
+  }
+}
+
+/* ==================== TABLET LANDSCAPE (960px to 1024px) ==================== */
+@media (min-width: 960px) and (max-width: 1024px) and (orientation: landscape) {
+  .bottom-nav {
+    height: 65px;
+  }
+  
+  .nav-item svg {
+    width: 26px !important;
+    height: 26px !important;
+  }
+  
+  .nav-item span {
+    font-size: 0.875rem;
+  }
+}
+
+/* ==================== MOBILE BREAKPOINTS ==================== */
+/* Extra Small Devices (below 480px) */
+@media (max-width: 479px) {
+  .container {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  
+  .dashboard,
+  .page,
+  .profile-container {
+    padding: 1rem 3%;
+  }
+  
+  .header {
+    padding: 0 3%;
+  }
+  
+  .add-medicine-form,
+  .medicine-list,
+  .notification-settings,
+  .profile-section,
+  section {
+    padding: 1.25rem;
+    border-radius: var(--radius-lg, 12px);
+  }
+  
+  .bottom-nav {
+    height: 60px;
+  }
+  
+  .nav-item svg {
+    width: 22px !important;
+    height: 22px !important;
+    margin-bottom: 4px;
+  }
+  
+  .nav-item span {
+    font-size: 0.75rem;
+  }
+  
+  /* Toast Container */
+  .toast-container {
+    right: 8px;
+    left: 8px;
+    top: 65px;
+  }
+  
+  /* Medicine Cards */
+  .medicine-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  /* Dashboard Layout */
+  .dashboard-layout {
+    gap: 1.25rem;
+  }
+}
+
+/* Small Mobile (below 375px) */
+@media (max-width: 374px) {
+  .container {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  
+  .dashboard,
+  .page,
+  .profile-container {
+    padding: 0.875rem 2%;
+  }
+  
+  .add-medicine-form,
+  .medicine-list,
+  .notification-settings,
+  .profile-section,
+  section {
+    padding: 1rem;
+  }
+}
+
+/* ==================== PRINT STYLES ==================== */
+@media print {
+  .no-print,
+  .bottom-nav,
+  .header-actions,
+  .download-button,
+  .pwa-install-button,
+  .toast-container,
+  button:not(.print-show),
+  .actions button {
+    display: none !important;
+  }
+  
+  body {
+    background-color: white !important;
+    background: white !important;
+    color: black;
+  }
+  
+  .container,
+  .dashboard,
+  .page,
+  .profile-container {
+    max-width: 100% !important;
+    padding: 1rem !important;
+  }
+  
+  .content {
+    padding: 0 !important;
+  }
+  
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .medicine-card,
+  .profile-section,
+  section {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+    page-break-inside: avoid;
+  }
+  
+  h1, h2, h3 {
+    page-break-after: avoid;
+    color: black !important;
+    background: none !important;
+    -webkit-text-fill-color: black !important;
+  }
+}
+
+/* ==================== ORIENTATION CHANGES ==================== */
+@media (orientation: landscape) and (max-height: 500px) {
+  .bottom-nav {
+    height: 55px;
+  }
+  
+  .nav-item svg {
+    width: 20px !important;
+    height: 20px !important;
+    margin-bottom: 2px;
+  }
+  
+  .nav-item span {
+    font-size: 0.75rem;
+  }
+}
+
+/* ==================== TOUCH DEVICES ==================== */
+@media (hover: none) and (pointer: coarse) {
+  /* Increase tap target sizes for touch devices */
+  .nav-item {
+    padding: 12px 8px;
+  }
+  
+  button,
+  .btn,
+  a.button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .form-group input,
+  .form-input,
+  .form-select {
+    min-height: 44px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* ==================== MOUSE/TRACKPAD DEVICES ==================== */
+@media (hover: hover) and (pointer: fine) {
+  /* Enhanced hover effects for mouse users */
+  .nav-item:hover {
+    background: rgba(102, 126, 234, 0.05);
+  }
+  
+  .medicine-card:hover,
+  .profile-section:hover,
+  section:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* ==================== HIGH DPI SCREENS ==================== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Ensure crisp rendering on retina displays */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ==================== DISPLAY UTILITIES ==================== */
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  display: block !important;
+}
+
+@media (max-width: 639px) {
+  .sm\:visible {
+    display: block !important;
+  }
+  .desktop-only {
+    display: none !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+/* ==================== SPACING UTILITIES ==================== */
+@media (max-width: 767px) {
+  .responsive-spacing {
+    padding: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .responsive-spacing {
+    padding: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+}
+
+/* ==================== FLEXBOX UTILITIES ==================== */
+.flex-responsive {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .flex-responsive {
+    flex-direction: row;
+  }
+}
+
+/* ==================== REDUCED MOTION ==================== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .nav-item:hover svg {
+    transform: none !important;
+  }
+  
+  .nav-item.active svg {
+    transform: none !important;
+  }
+}
